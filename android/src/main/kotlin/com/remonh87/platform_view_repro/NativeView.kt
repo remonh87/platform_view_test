@@ -21,10 +21,14 @@ internal class NativeView(context: Context,
 
     init {
        layout= CustomButtonView(context)
-        layout.setOnClickListener {
+        layout.initialize()
+
+        layout.button?.isClickable=true
+        layout.button?.setOnClickListener {
             channel.invokeMethod("onPressed", null)
         }
-        layout.initialize()
+
+
 
     }
 }

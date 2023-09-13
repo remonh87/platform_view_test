@@ -7,7 +7,7 @@ import android.widget.FrameLayout
 
 
 class CustomButtonView(private val context: Context) : FrameLayout(context) {
-    private var button: View? = null
+    internal var button: View? = null
     private var type: Int? = null
 
     fun initialize() {
